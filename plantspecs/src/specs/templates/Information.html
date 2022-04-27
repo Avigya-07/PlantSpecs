@@ -1,0 +1,52 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+
+  <section id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+              <p>Common Name:{{plant.Common_Name}}<br>Scientific Name:{{plant.Scientific_Name}}
+                <br>Family:{{plant.Family}}<br>Sub-Family:{{plant.SubFamily}}
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+
+<div class="container" style="background-image: url('{% static "img/plant-3.jpg" %}');background-repeat: no-repeat;background-size:cover;">
+  <div class="row">
+    <div class="col-md">
+      <h2 style="color: black;margin-top: 20px;">Plant Name</h2>
+      <p style="color: black; ">Common Name:{{plant.Common_Name}}<br>Scientific Name:{{plant.Scientific_Name}}
+        <br>Family:{{Family}}<br>Sub-Family:{{SubFamily}}
+      </p>
+    </div>
+    <div class="col">
+      <h1 style="color: black; margin-top: 20px; text-align: center;">Abundant Areas</h1>
+      <p style="color: black;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse voluptatem dolore numquam maxime fuga asper
+        iores aperiam voluptates eveniet qui dolor, doloremque inventore nulla aliquid. Harum maiores nesciunt non quo
+        s quidem!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum animi eum delectus error hic ipsam repellendus saepe tenetur! F
+        acere laudantium amet error eveniet laborum illo. Possimus aut veniam fugiat dolore!  </p>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h1 style="color: black;">Information about the plant</h1>
+        <p style="color: black; border-style: solid; border-width: 5px; padding:20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet perferendis iusto atque officia libero, incidunt quo
+          d ea ipsum dolorem quibusdam tempora nihil ex odio quisquam assumenda iste cumque dolores aspernatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sed aperiam atque doloribus adipisci fugiat dolor sunt 
+          minus facilis soluta animi eos itaque odio porro perspiciatis laudantium pariatur, possimus iure?. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque ipsa non, corrupti eum placeat ea reiciendis quia voluptas porro adipisci, 
+          debitis, veritatis officiis provident fugiat! Voluptate, officiis ipsum. Quam, at!</p>
+      </div>
+      <div class="col">
+        <h1 style="color: black;text-align: center;">Ways to treat/care</h1>
+        <p style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus exercitationem accusantium et provident quae 
+          debitis tempora, quasi quaerat. Quam adipisci soluta quis accusamus rerum reiciendis aut eaque maxime tempore nam.</p>
+      </div>
+    </div>  
+  </div>
+</div>
+
+{% endblock %}
