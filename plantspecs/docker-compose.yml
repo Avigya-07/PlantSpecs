@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    container_name: fyp_db
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_DATABASE='plantspecs'
+      - MYSQL_USER='root'
+      - MYSQL_PASSWORD='avigya'
+      - MYSQL_ROOT_PASSWORD='avigya'
+    ports:
+      - '3306:3306'
+  web:
+    container_name: fyp
+    build: .
+    command: python src/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/src
+    depends_on:
+      - db
